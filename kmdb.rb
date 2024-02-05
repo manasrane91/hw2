@@ -71,12 +71,97 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
+
 # Generate models and tables, according to the domain model.
 # TODO!
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+new_studio = Studio.new
+
+puts new_studio.inspect
+
+new_studio["name"] = "Warner Bros."
+new_studio.save
+
+puts "There are #{Studio.all.count} studios"
+
+new_movie = Movie.new
+
+puts new_movie.inspect
+
+new_movie["title"] = "Batman Begins"
+new_movie["year_released"] = "2005"
+new_movie["rated"] = "PG-13"
+new_movie.save
+
+puts "There are #{Movie.all.count} movies"
+
+new_movie2 = Movie.new
+new_movie2["title"] = "The Dark Knight"
+new_movie2["year_released"] = "2013"
+new_movie2["rated"] = "PG-13"
+new_movie2.save
+
+puts "There are #{Movie.all.count} movies"
+
+new_movie3 = Movie.new
+new_movie3["title"] = "The Dark Knight Rises"
+new_movie3["year_released"] = "2012"
+new_movie3["rated"] = "PG-13"
+new_movie3.save
+
+puts "There are #{Movie.all.count} movies"
+
+new_actor = Actor.new
+
+puts new_actor.inspect
+
+new_actor["name"] = "Christian Bale"
+new_actor.save
+
+puts "There are #{Actor.all.count} actors"
+
+new_actor2 = Actor.new
+new_actor2["name"] = "Michael Caine"
+new_actor2.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor3 = Actor.new
+new_actor3["name"] = "Liam Neeson"
+new_actor3.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor4 = Actor.new
+new_actor4["name"] = "Katie Holmes"
+new_actor4.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor5 = Actor.new
+new_actor5["name"] = "Gary Oldman"
+new_actor5.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor6 = Actor.new
+new_actor6["name"] = "Heath Ledger"
+new_actor6.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor7 = Actor.new
+new_actor7["name"] = "Aaron Eckhart"
+new_actor7.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor8 = Actor.new
+new_actor8["name"] = "Maggie Gyllenhaal"
+new_actor8.save
+puts "There are #{Actor.all.count} actors"
 
 # Prints a header for the movies output
 puts "Movies"
