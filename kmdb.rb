@@ -163,6 +163,99 @@ new_actor8["name"] = "Maggie Gyllenhaal"
 new_actor8.save
 puts "There are #{Actor.all.count} actors"
 
+new_actor9 = Actor.new
+new_actor9["name"] = "Tom Hardy"
+new_actor9.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor10 = Actor.new
+new_actor10["name"] = "Joseph Gordon-Levitt"
+new_actor10.save
+puts "There are #{Actor.all.count} actors"
+
+new_actor11 = Actor.new
+new_actor11["name"] = "Anne Hathaway"
+new_actor11.save
+puts "There are #{Actor.all.count} actors"
+
+new_role = Role.new
+
+puts new_role.inspect
+
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+puts "There are #{Role.all.count} roles"
+
+new_role2 = Role.new
+new_role2["character_name"] = "Alfred"
+new_role2.save
+puts "There are #{Role.all.count} roles"
+
+new_role3 = Role.new
+new_role3["character_name"] = "Ras Al Ghul"
+new_role3.save
+puts "There are #{Role.all.count} roles"
+
+new_role4 = Role.new
+new_role4["character_name"] = "Rachel Dawes"
+new_role4.save
+puts "There are #{Role.all.count} roles"
+
+new_role5 = Role.new
+new_role5["character_name"] = "Comissioner Gordon"
+new_role5.save
+puts "There are #{Role.all.count} roles"
+
+new_role6 = Role.new
+new_role6["character_name"] = "Bruce Wayne"
+new_role6.save
+puts "There are #{Role.all.count} roles"
+
+new_role7 = Role.new
+new_role7["character_name"] = "Joker"
+new_role7.save
+puts "There are #{Role.all.count} roles"
+
+new_role8 = Role.new
+new_role8["character_name"] = "Harvey Dent"
+new_role8.save
+puts "There are #{Role.all.count} roles"
+
+new_role9 = Role.new
+new_role9["character_name"] = "Alfred"
+new_role9.save
+puts "There are #{Role.all.count} roles"
+
+new_role10 = Role.new
+new_role10["character_name"] = "Rachel Dawes"
+new_role10.save
+puts "There are #{Role.all.count} roles"
+
+new_role11 = Role.new
+new_role11["character_name"] = "Bruce Wayne"
+new_role11.save
+puts "There are #{Role.all.count} roles"
+
+new_role12 = Role.new
+new_role12["character_name"] = "Comissioner Gordon"
+new_role12.save
+puts "There are #{Role.all.count} roles"
+
+new_role13 = Role.new
+new_role13["character_name"] = "Bane"
+new_role13.save
+puts "There are #{Role.all.count} roles"
+
+new_role14 = Role.new
+new_role14["character_name"] = "John Blake"
+new_role14.save
+puts "There are #{Role.all.count} roles"
+
+new_role15 = Role.new
+new_role15["character_name"] = "Selina Kyle"
+new_role15.save
+puts "There are #{Role.all.count} roles"
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
