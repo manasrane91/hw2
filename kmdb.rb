@@ -96,10 +96,14 @@ new_movie = Movie.new
 
 puts new_movie.inspect
 
+
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
 new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = new_studio["id"]
 new_movie.save
+
+
 
 puts "There are #{Movie.all.count} movies"
 
@@ -107,6 +111,7 @@ new_movie2 = Movie.new
 new_movie2["title"] = "The Dark Knight"
 new_movie2["year_released"] = "2013"
 new_movie2["rated"] = "PG-13"
+new_movie2["studio_id"] = new_studio["id"]
 new_movie2.save
 
 puts "There are #{Movie.all.count} movies"
@@ -115,6 +120,7 @@ new_movie3 = Movie.new
 new_movie3["title"] = "The Dark Knight Rises"
 new_movie3["year_released"] = "2012"
 new_movie3["rated"] = "PG-13"
+new_movie3["studio_id"] = new_studio["id"]
 new_movie3.save
 
 puts "There are #{Movie.all.count} movies"
@@ -256,6 +262,9 @@ new_role15["character_name"] = "Selina Kyle"
 new_role15.save
 puts "There are #{Role.all.count} roles"
 
+all_actors = Actor.all
+puts all_actors.inspect
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -263,6 +272,29 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+# movie_studios = Movie.where({"studio_id" => new_studio["id"]}) 
+#puts movie_studios.inspect
+
+
+#for movies in movie_studios
+    #movie_title = movies["title"]
+
+#studioname = Studio.find_by({"id" => movies["studio_id"]})
+
+#puts studioname.inspect
+
+ #   puts "#{movies["title"]} #{movies["year_released"]} #{movies["rated"]} #{movies["studio_id"]}" 
+
+
+movies = Movie.all
+
+for movie in movies
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+end
+
+#contact = Contact.find_by({"id" => activity["contact_id"]})
+
 
 # Prints a header for the cast output
 puts ""
