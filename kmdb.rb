@@ -280,7 +280,7 @@ puts ""
 #for movies in movie_studios
     #movie_title = movies["title"]
 
-#studioname = Studio.find_by({"id" => movies["studio_id"]})
+#studioname = Studio.find_by({"id" => movie["studio_id"]})
 
 #puts studioname.inspect
 
@@ -289,11 +289,13 @@ puts ""
 
 movies = Movie.all
 
+
 for movie in movies
     puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+    puts "Warner Bros."
 end
 
-#contact = Contact.find_by({"id" => activity["contact_id"]})
+
 
 
 # Prints a header for the cast output
@@ -304,3 +306,4 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
