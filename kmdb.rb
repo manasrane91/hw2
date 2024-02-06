@@ -321,10 +321,11 @@ movies = Movie.all
 
 
 for movie in movies
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}" 
-    puts "Warner Bros."
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]}" 
+    
+    studio = Studio.find_by "id" => movie["studio_id"]
+    puts studio["name"]
 end
-
 
 
 
@@ -337,10 +338,12 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-for role in roles
 
-    puts "#{}"
-end
+
+#for role in roles
+
+   # puts "#{}"
+#end
 
 
 
