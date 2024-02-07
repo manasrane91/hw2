@@ -321,10 +321,11 @@ movies = Movie.all
 
 
 for movie in movies
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]}" 
-    
     studio = Studio.find_by "id" => movie["studio_id"]
-    puts studio["name"]
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{studio["name"]}" 
+    
+   
+    
 end
 
 
@@ -343,12 +344,9 @@ roles = Role.all
 for role in roles
 
     movie_name = Movie.find_by "id" => role["movie_id"]
-    puts movie_name["title"]
-
     actor_name = Actor.find_by "id" => role["actor_id"]
-    puts actor_name["name"]
 
-    puts "#{role["character_name"]}"
+    puts "#{movie_name["title"]} #{actor_name["name"]} #{role["character_name"]}"
     
 
 end
